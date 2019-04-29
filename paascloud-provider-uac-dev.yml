@@ -16,7 +16,7 @@ mybatis:
 mapper:
   mappers: com.dractivitytreasure.core.mybatis.MyMapper
   not-empty: false
-  identity: MYSQL
+  identity: MYSQL1
 
 pagehelper:
   helperDialect: mysql
