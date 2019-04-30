@@ -5,7 +5,7 @@ spring:
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/paascloud_uac?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/dractivitytreasure_uac?characterEncoding=utf8&useSSL=false
 
 mybatis:
   type-aliases-package: com.dractivitytreasure.provider.model.domain
@@ -33,33 +33,33 @@ liquibase:
 security:
   oauth2:
     client:
-      clientId: paascloud-client-uac
-      clientSecret: paascloudClientSecret
-      access-token-uri: http://paascloud-gateway:7979/uac/oauth/token
-      user-authorization-uri: http://paascloud-gateway:7979/uac/oauth/authorize
+      clientId: dractivitytreasure-client-uac
+      clientSecret: dractivitytreasureClientSecret
+      access-token-uri: http://dractivitytreasure-gateway:7979/uac/oauth/token
+      user-authorization-uri: http://dractivitytreasure-gateway:7979/uac/oauth/authorize
     resource:
-      id: paascloud-resource-uac
+      id: dractivitytreasure-resource-uac
       filter-order: 3
 
-paascloud:
+dractivitytreasure:
   enableSqlLogInterceptor: false
   aliyun:
     rocketMq:
       enable: true
       reliableMessageConsumer: false
       reliableMessageProducer: true
-      instanceName: paascloud-provider-uac
+      instanceName: dractivitytreasure-provider-uac
       consumerGroup: CID_UAC
       producerGroup: PID_UAC
   auth:
-    rest-pwd-url: http://dev-login.paascloud.net/resetPwd?resetPwdKey=
-    active-user-url: http://dev-api.paascloud.net:7979/uac/auth/activeUser/
-    refresh-token-url: http://dev-api.paascloud.net:7979/uac/oauth/token
+    rest-pwd-url: http://dev-login.dractivitytreasure.net/resetPwd?resetPwdKey=
+    active-user-url: http://dev-api.dractivitytreasure.net:7979/uac/auth/activeUser/
+    refresh-token-url: http://dev-api.dractivitytreasure.net:7979/uac/oauth/token
   token:
     interceptor:
       enable: true
   oauth2:
-    jwtSigningKey: paascloud
+    jwtSigningKey: dractivitytreasure
     client:
       id: ${security.oauth2.resource.id}
       accessTokenUrl: ${security.oauth2.client.access-token-uri}
@@ -90,42 +90,42 @@ paascloud:
     oauth2:
       tokenStore: jwt
       clients[0]:
-        clientId: paascloud-client-uac
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-client-uac
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[1]:
-        clientId: paascloud-browser
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-browser
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[2]:
-        clientId: paascloud-client-gateway
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-client-gateway
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[3]:
-        clientId: paascloud-client-zipkin
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-client-zipkin
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[4]:
-        clientId: paascloud-client-mdc
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-client-mdc
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[5]:
-        clientId: paascloud-client-omc
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-client-omc
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[6]:
-        clientId: paascloud-client-opc
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-client-opc
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[7]:
-        clientId: paascloud-client-tpc
-        clientSecret: paascloudClientSecret
+        clientId: dractivitytreasure-client-tpc
+        clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
