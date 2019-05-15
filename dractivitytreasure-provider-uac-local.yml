@@ -5,7 +5,7 @@ spring:
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
-    url: jdbc:mysql://58.63.255.26:3306/huodongbao?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://192.168.51.8:3306/huodongbao?characterEncoding=utf8&useSSL=false
 
 mybatis:
   type-aliases-package: com.dractivitytreasure.provider.model.domain
@@ -35,8 +35,8 @@ security:
     client:
       clientId: dractivitytreasure-client-uac
       clientSecret: dractivitytreasureClientSecret
-      access-token-uri: http://dractivitytreasure-gateway:7979/uac/oauth/token
-      user-authorization-uri: http://dractivitytreasure-gateway:7979/uac/oauth/authorize
+      access-token-uri: http://192.168.51.14:7979/uac/oauth/token
+      user-authorization-uri: http://192.168.51.14:7979/uac/oauth/authorize
     resource:
       id: dractivitytreasure-resource-uac
       filter-order: 3
