@@ -28,58 +28,10 @@ zuul:
         OkToRetryOnAllOperations: false
         ConnectTimeout: 10000
         ReadTimeout: 10000
-    mdc-route:
-      path: /mdc/**
+    amc-route:
+      path: /amc/**
       sensitiveHeaders:
-      service-id: dractivitytreasure-provider-mdc
-      ribbon:
-        eager-load:
-          enabled: true
-        MaxAutoRetries: 1
-        MaxAutoRetriesNextServer: 2
-        OkToRetryOnAllOperations: false
-        ConnectTimeout: 10000
-        ReadTimeout: 10000
-    omc-route:
-      path: /omc/**
-      sensitiveHeaders:
-      service-id: dractivitytreasure-provider-omc
-      ribbon:
-        eager-load:
-          enabled: true
-        MaxAutoRetries: 1
-        MaxAutoRetriesNextServer: 2
-        OkToRetryOnAllOperations: false
-        ConnectTimeout: 10000
-        ReadTimeout: 10000
-    opc-route:
-      path: /opc/**
-      sensitiveHeaders:
-      service-id: dractivitytreasure-provider-opc
-      ribbon:
-        eager-load:
-          enabled: true
-        MaxAutoRetries: 1
-        MaxAutoRetriesNextServer: 2
-        OkToRetryOnAllOperations: false
-        ConnectTimeout: 10000
-        ReadTimeout: 10000
-    mall-route:
-      path: /mall/**
-      sensitiveHeaders:
-      service-id: dractivitytreasure-web-mall
-      ribbon:
-        eager-load:
-          enabled: true
-        MaxAutoRetries: 1
-        MaxAutoRetriesNextServer: 2
-        OkToRetryOnAllOperations: false
-        ConnectTimeout: 10000
-        ReadTimeout: 10000
-    tpc-route:
-      path: /tpc/**
-      sensitiveHeaders:
-      service-id: dractivitytreasure-provider-tpc
+      service-id: dractivitytreasure-provider-amc
       ribbon:
         eager-load:
           enabled: true
