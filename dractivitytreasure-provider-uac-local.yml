@@ -110,7 +110,7 @@ dractivitytreasure:
         accessTokenValidateSeconds: 7200
         scope: "*"
       clients[4]:
-        clientId: dractivitytreasure-client-mdc
+        clientId: dractivitytreasure-client-amc
         clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 7200
         scope: "*"
