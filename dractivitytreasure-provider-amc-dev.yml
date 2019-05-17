@@ -33,7 +33,7 @@ pagehelper:
 security:
   oauth2:
     client:
-      clientId: dractivitytreasure-client-amc
+      clientId: dractivitytreasure-client-uac
       clientSecret: paascloudClientSecret
       access-token-uri: http://dractivitytreasure-gateway:7979/uac/oauth/token
       user-authorization-uri: http://dractivitytreasure-gateway:7979/uac/oauth/authorize
