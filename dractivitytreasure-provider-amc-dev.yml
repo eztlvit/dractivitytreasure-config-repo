@@ -5,10 +5,16 @@ spring:
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
-    url: jdbc:mysql://192.168.51.8:3306/huodongbao_amc?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://192.168.51.8:3306/huodongbao?characterEncoding=utf8&useSSL=false
+
+liquibase:
+  change-log: classpath:liquibase/index.xml
+  user: ${spring.datasource.username}
+  password: ${spring.datasource.password}
+  url: ${spring.datasource.url}
 
 mybatis:
-  type-aliases-package: com.dractivitytreasure.provider.model.domain
+  type-aliases-package: com.paascloud.provider.model.domain
   mapper-locations: classpath:mapper/*.xml,classpath*:sdk/mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
@@ -24,40 +30,34 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
-liquibase:
-  change-log: classpath:liquibase/index.xml
-  user: ${spring.datasource.username}
-  password: ${spring.datasource.password}
-  url: ${spring.datasource.url}
-
 security:
   oauth2:
     client:
-      clientId: dractivitytreasure-client-uac
-      clientSecret: dractivitytreasureClientSecret
-      access-token-uri: http://192.168.51.14:7979/uac/oauth/token
-      user-authorization-uri: http://192.168.51.14:7979/uac/oauth/authorize
+      clientId: dractivitytreasure-client-amc
+      clientSecret: paascloudClientSecret
+      access-token-uri: http://dractivitytreasure-gateway:7979/uac/oauth/token
+      user-authorization-uri: http://dractivitytreasure-gateway:7979/uac/oauth/authorize
     resource:
-      id: dractivitytreasure-resource-uac
-      filter-order: 3
+      user-info-uri: http://dractivitytreasure-gateway:7979/uac/user
+      prefer-token-info: false
+      jwt:
+        key-uri: http://dractivitytreasure-provider-uac:8000/oauth/token_key
 
 dractivitytreasure:
   enableSqlLogInterceptor: false
   aliyun:
     rocketMq:
-      enable: true
+      enable: false
       reliableMessageConsumer: false
-      reliableMessageProducer: true
-      instanceName: dractivitytreasure-provider-uac
-      consumerGroup: CID_UAC
-      producerGroup: PID_UAC
-  auth:
-    rest-pwd-url: http://192.168.51.14/resetPwd?resetPwdKey=
-    active-user-url: http://192.168.51.14:7979/uac/auth/activeUser/
-    refresh-token-url: http://192.168.51.14:7979/uac/oauth/token
+      reliableMessageProducer: false
+      instanceName: dractivitytreasure-provider-amc
+      consumerGroup: CID_OMC
+      producerGroup: PID_OMC
   token:
     interceptor:
       enable: true
+  zk:
+    zkAddressList: dractivitytreasure-provider-zk:2181
   oauth2:
     jwtSigningKey: dractivitytreasure
     client:
@@ -66,66 +66,10 @@ dractivitytreasure:
       clientId: ${security.oauth2.client.clientId}
       clientSecret: ${security.oauth2.client.clientSecret}
       clientAuthenticationScheme: header
-  security:
-    social:
-      filterProcessesUrl: /auth/callback
-      qq:
-        app-id: 101431061
-        app-secret: 0154c848f45fc705412462d4f99a592c
-        providerId: qq
-      weixin:
-        app-id: wxd99431bbff8305a0
-        app-secret: 60f78681d063590a469f1b297feff3c4
-        providerId: weixin
-    code:
-      image:
-        expireIn: 180
-        url: /auth/register,/auth/submitResetPwdEmail,/auth/code/sms
-      sms:
-        expireIn: 600
-        url: /uac/auth/submitResetPwdPhone
-        mobileMaxSendCount: 1
-        ipMaxSendCount: 2
-        totalMaxSendCount: 3
-    oauth2:
       tokenStore: jwt
-      clients[0]:
-        clientId: dractivitytreasure-client-uac
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[1]:
-        clientId: dractivitytreasure-browser
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[2]:
-        clientId: dractivitytreasure-client-gateway
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[3]:
-        clientId: dractivitytreasure-client-zipkin
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[4]:
-        clientId: dractivitytreasure-client-mdc
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[5]:
-        clientId: dractivitytreasure-client-omc
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[6]:
-        clientId: dractivitytreasure-client-opc
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
-      clients[7]:
-        clientId: dractivitytreasure-client-tpc
-        clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
-        scope: "*"
+  alipay:
+    callback:
+      url: http://api.dractivitytreasure.net/omc/pay/alipayCallback
+    qrCode:
+      pcPath: E:/File/alipay/QRCode
+      qiniuPath: alipay/QRCode/
