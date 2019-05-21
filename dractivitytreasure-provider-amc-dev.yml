@@ -41,7 +41,7 @@ security:
       user-info-uri: http://dractivitytreasure-gateway:7979/uac/user
       prefer-token-info: false
       jwt:
-        key-uri: http://dractivitytreasure-provider-uac:8000/oauth/token_key
+        key-uri: http://192.168.51.8:8000/oauth/token_key
 
 dractivitytreasure:
   enableSqlLogInterceptor: false
