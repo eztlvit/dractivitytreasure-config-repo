@@ -14,6 +14,7 @@ spring:
       max-file-size: 50MB
 
 zuul:
+  prefix: /
   host:
     socket-timeout-millis: 8000
     connect-timeout-millis: 8000
@@ -22,7 +23,7 @@ zuul:
     uac-route:
       path: /uac/**
       sensitiveHeaders:
-#      strip-prefix: false
+      # strip-prefix: false
       service-id: dractivitytreasure-provider-uac
     amc-route:
       path: /amc/**
@@ -63,7 +64,7 @@ security:
       user-info-uri: http://dractivitytreasure-gateway:7979/uac/user
       prefer-token-info: false
       jwt:
-        key-uri: http://192.168.51.14:8000/oauth/token_key
+        key-uri: http://dractivitytreasure-provider-uac:8000/oauth/token_key
 
 proxy:
   auth:

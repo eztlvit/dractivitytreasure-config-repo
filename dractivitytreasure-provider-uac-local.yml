@@ -35,8 +35,8 @@ security:
     client:
       clientId: dractivitytreasure-client-uac
       clientSecret: dractivitytreasureClientSecret
-      access-token-uri: http://192.168.51.14:7979/uac/oauth/token
-      user-authorization-uri: http://192.168.51.14:7979/uac/oauth/authorize
+      access-token-uri: http://dractivitytreasure-gateway:7979/uac/oauth/token
+      user-authorization-uri: http://dractivitytreasure-gateway:7979/uac/oauth/authorize
     resource:
       id: dractivitytreasure-resource-uac
       filter-order: 3
@@ -52,9 +52,10 @@ dractivitytreasure:
       consumerGroup: CID_UAC
       producerGroup: PID_UAC
   auth:
-    rest-pwd-url: http://192.168.51.14/resetPwd?resetPwdKey=
-    active-user-url: http://192.168.51.14:7979/uac/auth/activeUser/
-    refresh-token-url: http://192.168.51.14:7979/uac/oauth/token
+    rest-pwd-url: http://1dev-api.dractivitytreasure.net/resetPwd?resetPwdKey=
+    active-user-url: http://dev-api.dractivitytreasure.net:7979/uac/auth/activeUser/
+    refresh-token-url: http://dev-api.dractivitytreasure.net:7979/uac/oauth/token
+    mobile-login-url: http://dev-api.dractivitytreasure.net:7979/uac/oauth/mobile
   token:
     interceptor:
       enable: true
