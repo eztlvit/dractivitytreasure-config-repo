@@ -10,12 +10,12 @@ spring:
         enabled: true
 
 zipkin:
-  collector:
-    rabbitmq:
-      addresses: dractivitytreasure-mq-rabbit:5672
-      username: guest
-      password: guest
-      queue: zipkin
+  # collector:
+    # rabbitmq:
+      # addresses: dractivitytreasure-mq-rabbit:5672
+      # username: guest
+      # password: guest
+      # queue: zipkin
   storage:
     type: mysql
 
