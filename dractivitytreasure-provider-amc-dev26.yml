@@ -8,7 +8,7 @@ spring:
     url: jdbc:mysql://58.63.255.26:3306/huodongbao?characterEncoding=utf8&useSSL=false
 
 redis:
-  hostname: 58.63.255.26
+  hostname: 20.0.0.40
   port: 6379
   username: 
   password:
