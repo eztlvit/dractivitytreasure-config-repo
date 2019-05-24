@@ -38,28 +38,28 @@ spring:
         allow:
         login-username: admin
         login-password: admin
-  mail:
-    host: smtp.163.com
-    username: dractivitytreasureTest@163.com
-    password: a123456
-    port: 465
-    protocol: smtp
-    test-connection: false
-    default-encoding: UTF-8
-    properties:
-      mail:
-        debug: true
-        smtp:
-          auth: true
-          connectiontimeout: 10000
-          timeout: 10000
-          writetimeout: 10000
-          socketFactory:
-            class: javax.net.ssl.SSLSocketFactory
-            port: 465
-          starttls:
-            enable: true
-            required: true
+  # mail:
+    # host: smtp.163.com
+    # username: dractivitytreasureTest@163.com
+    # password: a123456
+    # port: 465
+    # protocol: smtp
+    # test-connection: false
+    # default-encoding: UTF-8
+    # properties:
+      # mail:
+        # debug: true
+        # smtp:
+          # auth: true
+          # connectiontimeout: 10000
+          # timeout: 10000
+          # writetimeout: 10000
+          # socketFactory:
+            # class: javax.net.ssl.SSLSocketFactory
+            # port: 465
+          # starttls:
+            # enable: true
+            # required: true
   boot:
     admin:
       username: admin
