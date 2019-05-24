@@ -5,10 +5,10 @@ spring:
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
-    url: jdbc:mysql://192.168.54.8:3306/huodongbao?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://192.168.52.8:3306/huodongbao?characterEncoding=utf8&useSSL=false
 
 redis:
-  hostname: 192.168.54.8
+  hostname: 192.168.52.8
   port: 6379
   username: 
   password:
