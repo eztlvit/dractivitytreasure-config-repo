@@ -6,6 +6,16 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
     url: jdbc:mysql://192.168.52.8:3306/huodongbao?characterEncoding=utf8&useSSL=false
+  sleuth:
+    sampler:
+      percentage: 1.0
+    web:
+      skipPattern: (^cleanup.*)
+  zipkin: 
+    baseUrl: http://dractivitytreasure-zipkin:8020/
+    locator:
+      discovery:
+        enabled: true
 
 liquibase:
   change-log: classpath:liquibase/index.xml
