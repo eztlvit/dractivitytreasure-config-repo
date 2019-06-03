@@ -1,14 +1,4 @@
 spring:
-  sleuth:
-    sampler:
-      percentage: 1.0
-    web:
-      skipPattern: (^cleanup.*)
-  zipkin: 
-    baseUrl: http://192.168.54.14:8020/
-    locator:
-      discovery:
-        enabled: true
   cloud:
     loadbalancer:
         retry: 
@@ -22,6 +12,16 @@ spring:
       enabled: true
       max-request-size: 50MB
       max-file-size: 50MB
+  # sleuth:
+    # sampler:
+      # percentage: 1.0
+    # web:
+      # skipPattern: (^cleanup.*)
+  # zipkin: 
+    # baseUrl: http://192.168.54.14:8020/
+    # locator:
+      # discovery:
+        # enabled: true
 
 zuul:
   prefix: /
