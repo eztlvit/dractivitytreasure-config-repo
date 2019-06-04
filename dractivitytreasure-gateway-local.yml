@@ -49,8 +49,8 @@ dractivitytreasure-provider-uac:
     MaxAutoRetries: 1
     MaxAutoRetriesNextServer: 2
     OkToRetryOnAllOperations: true
-    ConnectTimeout: 8000
-    ReadTimeout: 8000
+    ConnectTimeout: 80000
+    ReadTimeout: 80000
         
 dractivitytreasure-provider-amc:
   ribbon:        
@@ -59,8 +59,8 @@ dractivitytreasure-provider-amc:
     MaxAutoRetries: 1
     MaxAutoRetriesNextServer: 2
     OkToRetryOnAllOperations: false
-    ConnectTimeout: 3000
-    ReadTimeout: 3000
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
 
 
 security:
