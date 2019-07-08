@@ -111,7 +111,7 @@ dractivitytreasure:
     rocketMq:
       namesrvAddr: dractivitytreasure-mq-rocket:9876
     sms:
-      signName: dractivitytreasure
+      signName: dractivitytreasure signname
       regionId: cn-beijing
       endpoint:
       endpointName: cn-beijing
