@@ -22,7 +22,6 @@ spring:
     # locator:
       # discovery:
         # enabled: true
-
 zuul:
   ratelimit:
     key-prefix: dractivitytreasure-prefix
@@ -30,12 +29,13 @@ zuul:
     repository: REDIS
     behind-proxy: true
     add-response-headers: true
+    # default-policy-list: 
+        # limit: 10  
+        # quota: 1000 
+        # refresh-interval: 60  
+        # type: origin  
     policy-list:
       myServiceId: dractivitytreasure-provider-amc
-          limit: 10  
-          quota: 1000  
-          refresh-interval: 60  
-          type: origin
   prefix: /
   host:
     socket-timeout-millis: 8000
@@ -65,6 +65,10 @@ dractivitytreasure-provider-uac:
     ReadTimeout: 80000
         
 dractivitytreasure-provider-amc:
+  limit: 10  
+  quota: 1000  
+  refresh-interval: 60  
+  type: origin
   ribbon:        
     eager-load:
       enabled: true
