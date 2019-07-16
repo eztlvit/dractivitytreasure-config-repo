@@ -41,6 +41,23 @@ zuul:
       service-id: dractivitytreasure-provider-amc
   add-proxy-headers: true
   add-host-header: true
+  ratelimit:
+    key-prefix: dractivitytreasure-prefix
+    enabled: true
+    repository: REDIS
+    behind-proxy: true
+    add-response-headers: true
+    # default-policy-list: 
+        # limit: 10  
+        # quota: 1000 
+        # refresh-interval: 60  
+        # type: origin  
+    policy-list:
+      myServiceId: dractivitytreasure-provider-amc
+          limit: 10  
+          quota: 1000  
+          refresh-interval: 60  
+          type: origin
 
 dractivitytreasure-provider-uac:
   ribbon:
