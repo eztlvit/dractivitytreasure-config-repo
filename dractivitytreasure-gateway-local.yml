@@ -23,23 +23,6 @@ spring:
       # discovery:
         # enabled: true
 zuul:
-  ratelimit:
-    key-prefix: dractivitytreasure-prefix
-    enabled: true
-    repository: REDIS
-    behind-proxy: true
-    add-response-headers: true
-    default-policy-list: 
-        limit: 10  
-        quota: 1000 
-        refresh-interval: 60  
-        type: origin  
-    policy-list:
-      dractivitytreasure-provider-amc: 
-          limit: 10  
-          quota: 1000  
-          refresh-interval: 60  
-          type: origin
   prefix: /
   host:
     socket-timeout-millis: 8000
