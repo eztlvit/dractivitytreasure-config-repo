@@ -51,24 +51,23 @@ dractivitytreasure-provider-amc:
     ConnectTimeout: 30000
     ReadTimeout: 30000
 
-security:
-  oauth2:
-    client:
-      clientId: dractivitytreasure-client-gateway
-      clientSecret: dractivitytreasureClientSecret
-      access-token-uri: http://dractivitytreasure-gateway:7979/uac/oauth/token
-      user-authorization-uri: http://dractivitytreasure-gateway:7979/uac/oauth/authorize
-    resource:
-      user-info-uri: http://dractivitytreasure-gateway:7979/uac/user
-      prefer-token-info: false
-      jwt:
-        key-uri: http://dractivitytreasure-provider-uac:8000/oauth/token_key
-
 proxy:
   auth:
     routes:
       uac-route: oauth2
       mdc-route: oauth2
+
+dractivitytreasure:
+  enableSqlLogInterceptor: false
+  oauth2:
+    jwtSigningKey: dractivitytreasure
+    client:
+      id: ${security.oauth2.resource.id}
+      accessTokenUrl: ${security.oauth2.client.access-token-uri}
+      clientId: ${security.oauth2.client.clientId}
+      clientSecret: ${security.oauth2.client.clientSecret}
+      clientAuthenticationScheme: header
+      tokenStore: jwt
 
 security:
   oauth2:
