@@ -100,8 +100,8 @@ hystrix:
             timeoutInMilliseconds: 20000
 
 redis:
-  hostname: 192.168.52.8
-  port: 6379
+  hostname: 58.63.255.26
+  port: 6381
   username: 
   password:
 
