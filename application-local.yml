@@ -86,15 +86,15 @@ feign:
         connectTimeout: 20000
         readTimeout: 60000
 
-#如果自服务没有配置，所有子服务默认都会取这个超时配置
-# ribbon:
-  # eager-load:
-    # enabled: true
-  # MaxAutoRetries: 1
-  # MaxAutoRetriesNextServer: 2
-  # OkToRetryOnAllOperations: false
-  # ConnectTimeout: 20000
-  # ReadTimeout: 60000
+#如果自服务没有配置，所有子服务默认都会取这个超时配置，#配置优先级别,gateway服务配置>公共application配置>本地yml配置文件默认配置
+ribbon:
+  eager-load:
+    enabled: true
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: false
+  ConnectTimeout: 20000
+  ReadTimeout: 60000
 
 hystrix:
   command:
