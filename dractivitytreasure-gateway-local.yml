@@ -41,6 +41,7 @@ zuul:
   add-proxy-headers: true
   add-host-header: true
 
+#相应的字符的连接和请求超时设置
 dractivitytreasure-provider-uac:
   ribbon:
     eager-load:
@@ -58,8 +59,8 @@ dractivitytreasure-provider-amc:
     MaxAutoRetries: 1
     MaxAutoRetriesNextServer: 2
     OkToRetryOnAllOperations: false
-    ConnectTimeout: 30000
-    ReadTimeout: 30000
+    #ConnectTimeout: 30000
+    #ReadTimeout: 30000
 
 
 security:

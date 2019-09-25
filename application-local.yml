@@ -83,17 +83,18 @@ feign:
   client:
     config:
       default:
-        connectTimeout: 5000
-        readTimeout: 5000
+        connectTimeout: 20000
+        readTimeout: 60000
 
+#所有自服务都会取这个超时配置
 ribbon:
   eager-load:
     enabled: true
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 2
   OkToRetryOnAllOperations: false
-  ConnectTimeout: 60000
-  ReadTimeout: 20000
+  ConnectTimeout: 20000
+  ReadTimeout: 60000
 
 hystrix:
   command:
