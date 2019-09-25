@@ -49,7 +49,7 @@ dractivitytreasure-provider-uac:
     MaxAutoRetries: 1
     MaxAutoRetriesNextServer: 2
     OkToRetryOnAllOperations: true
-    ConnectTimeout: 80000
+    ConnectTimeout: 8000
     ReadTimeout: 80000
         
 dractivitytreasure-provider-amc:
@@ -59,8 +59,8 @@ dractivitytreasure-provider-amc:
     MaxAutoRetries: 1
     MaxAutoRetriesNextServer: 2
     OkToRetryOnAllOperations: false
-    #ConnectTimeout: 30000
-    #ReadTimeout: 30000
+    ConnectTimeout: 8000
+    ReadTimeout: 80000
 
 
 security:
