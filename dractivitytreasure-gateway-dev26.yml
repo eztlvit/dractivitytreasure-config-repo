@@ -49,7 +49,7 @@ dractivitytreasure-provider-amc:
     MaxAutoRetriesNextServer: 2
     OkToRetryOnAllOperations: false
     ConnectTimeout: 8000
-    ReadTimeout: 80000
+    ReadTimeout: 90000
 
 proxy:
   auth:
