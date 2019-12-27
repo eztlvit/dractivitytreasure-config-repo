@@ -83,7 +83,8 @@ dractivitytreasure:
         expireIn: 180
         url: /auth/register,/auth/submitResetPwdEmail,/auth/code/sms
       sms:
-        expireIn: 600
+        #短信过期时间为600秒
+        expireIn: 600 
         url: /uac/auth/submitResetPwdPhone
         mobileMaxSendCount: 1
         ipMaxSendCount: 2
