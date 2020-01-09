@@ -94,40 +94,40 @@ dractivitytreasure:
       clients[0]:
         clientId: dractivitytreasure-client-uac
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
       clients[1]:
         clientId: dractivitytreasure-browser
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
       clients[2]:
         clientId: dractivitytreasure-client-gateway
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
       clients[3]:
         clientId: dractivitytreasure-client-zipkin
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
       clients[4]:
         clientId: dractivitytreasure-client-amc
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
       clients[5]:
         clientId: dractivitytreasure-client-omc
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
       clients[6]:
         clientId: dractivitytreasure-client-opc
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
       clients[7]:
         clientId: dractivitytreasure-client-tpc
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 7200
+        accessTokenValidateSeconds: 2592000
         scope: "*"
