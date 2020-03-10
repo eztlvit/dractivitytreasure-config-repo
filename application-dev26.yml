@@ -138,8 +138,9 @@ dractivitytreasure:
       qiniuPath: alipay/QRCode/
   zk:
     zkAddressList: dractivitytreasure-provider-zk:2181
-  Minion:
-    clientUrl: http://down.duodian.drcom.com.cn:9000
+  minion:
+    clientUrl: https://down.duodian.drcom.com.cn
     accessKey: duodian
     secretKey: drcom123
     bucketName: devhuodongbao
+    port: 9000
