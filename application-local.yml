@@ -147,3 +147,4 @@ dractivitytreasure:
     accessKey: duodian
     secretKey: drcom123
     bucketName: devhuodongbao
+    port: 9000
