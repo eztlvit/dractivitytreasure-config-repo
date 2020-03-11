@@ -86,8 +86,8 @@ dractivitytreasure:
         app-secret: 0154c848f45fc705412462d4f99a592c
         providerId: qq
       weixin:
-        app-id: wx7797210ec766bb75
-        app-secret: 8f9441ba2240dd66d1d749ed31452d88
+        app-id: wx47260109f8275b56
+        app-secret: 0d5fd16ea48c8710f1416fced49be71e
         providerId: weixin
     code:
       image:
