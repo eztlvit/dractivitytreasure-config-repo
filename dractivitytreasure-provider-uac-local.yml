@@ -88,7 +88,7 @@ dractivitytreasure:
       weixin:
         app-id: wx47260109f8275b56
         app-secret: 0d5fd16ea48c8710f1416fced49be71e
-        providerId: weixin
+        providerId: wechat
     code:
       image:
         expireIn: 180
