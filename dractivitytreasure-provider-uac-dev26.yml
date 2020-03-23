@@ -69,15 +69,15 @@ dractivitytreasure:
       clientAuthenticationScheme: header
   security:
     social:
-      filterProcessesUrl: /oauth/wechat
+      filterProcessesUrl: /oauth
       qq:
-        app-id: 101431061
-        app-secret: 0154c848f45fc705412462d4f99a592c
+        app-id: 
+        app-secret: 
         providerId: qq
       weixin:
-        app-id: wxd99431bbff8305a0
-        app-secret: 60f78681d063590a469f1b297feff3c4
-        providerId: weixin
+        app-id: wx7797210ec766bb75
+        app-secret: 8f9441ba2240dd66d1d749ed31452d88
+        providerId: wechat
     code:
       image:
         expireIn: 180
