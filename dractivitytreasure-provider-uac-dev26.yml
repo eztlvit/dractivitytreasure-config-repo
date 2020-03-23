@@ -69,7 +69,7 @@ dractivitytreasure:
       clientAuthenticationScheme: header
   security:
     social:
-      filterProcessesUrl: /auth/callback
+      filterProcessesUrl: /oauth/wechat
       qq:
         app-id: 101431061
         app-secret: 0154c848f45fc705412462d4f99a592c
