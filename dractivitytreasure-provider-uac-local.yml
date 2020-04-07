@@ -104,7 +104,7 @@ dractivitytreasure:
       clients[0]:
         clientId: dractivitytreasure-client-uac
         clientSecret: dractivitytreasureClientSecret
-        accessTokenValidateSeconds: 259200
+        accessTokenValidateSeconds: 2
         scope: "*"
       clients[1]:
         clientId: dractivitytreasure-browser
