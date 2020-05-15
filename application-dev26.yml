@@ -140,7 +140,7 @@ dractivitytreasure:
     zkAddressList: dractivitytreasure-provider-zk:2181
   minion:
     clientUrl: https://down.duodian.drcom.com.cn
-    accessKey: duodian
-    secretKey: drcom123
+    accessKey: minioadmin
+    secretKey: minioadmin
     bucketName: devhuodongbao
     port: 9000
