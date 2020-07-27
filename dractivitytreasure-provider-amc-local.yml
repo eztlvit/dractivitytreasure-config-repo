@@ -75,7 +75,7 @@ dractivitytreasure:
       accessTokenUrl: ${security.oauth2.client.access-token-uri}
       clientId: ${security.oauth2.client.clientId}
       clientSecret: ${security.oauth2.client.clientSecret}
-      clientAuthenticationScheme: header update
+      clientAuthenticationScheme: form
       tokenStore: jwt
   alipay:
     callback:
