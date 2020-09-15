@@ -30,7 +30,7 @@ mybatis:
     map-underscore-to-camel-case: true
 
 mapper:
-  mappers: com.dractivitytreasure.core.mybatis.MyMapper
+  mappers: com.dractivitytreasure.common.core.mybatis.MyMapper
   not-empty: false
   identity: MYSQL
 

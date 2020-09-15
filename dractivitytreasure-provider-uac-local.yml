@@ -106,6 +106,8 @@ dractivitytreasure:
         clientSecret: dractivitytreasureClientSecret
         accessTokenValidateSeconds: 259200
         scope: "*"
+        redirectUris:[0]: http://www.baidu.com
+        redirectUris:[1]: http://www.qq.com
       clients[1]:
         clientId: dractivitytreasure-browser
         clientSecret: dractivitytreasureClientSecret
